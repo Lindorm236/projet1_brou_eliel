@@ -1,6 +1,7 @@
 <?php
 require_once "../functions/userCrud.php";
 require_once "../functions/validationSignup.php";
+require_once "../utils/connexion.php";
 session_start();
 /*if (isset($_POST["formInscription"]) && !empty($_POST["formInscription"])) {
     echo "<input type='text'";
@@ -91,20 +92,23 @@ if (isset($_POST["formInscription"])) {
                 'pwd' => $_POST["pwd"],
                 'fname' => $_POST['fname'],
                 'lname' => $_POST['lname'],
-                'billing_address_id' => 0,
-                'shipping_adress_id' => 0,
+                'billing_address_id' => 1,
+                'shipping_adress_id' => 1,
                 'token' => $token,
                 'role_id' => 3
             ];
             var_dump($data);
             //enregistrer dans la DB
-            insertInstanceIntoTable($data['user_name'], $data['email'], $data['pwd'], $data['fname'], $data['lname'], $data['billing_address_id'], $data['shipping_address_id'], $data['token'], $data['role_id']);
+
+            $newUser = createUser($data);
             // redirect vers login
             $url = '../pages/login.php';
             header('Location: ' . $url);
         } else {
             // si verif == false : on veut revenir sur le for, et qfficher nos ,essqges d.erreur
             echo ("faux");
+            //recuperer les messages d ereur dans un array 
+            // rendre se array dispo pour les afficher dans le form
             $_SESSION['signup_errors'] = [
                 'user_name' => $userNameValidationData['msg'],
                 'email' => $emailValidationData['msg'],
@@ -112,13 +116,10 @@ if (isset($_POST["formInscription"])) {
                 'fname' => $fnameValidationData['msg'],
                 'lname' => $lnameValidationData['msg']
             ];
+            // revenir sur le form
+            // afficher les messages d'erreur
             $url = '../pages/signup.php';
             header('Location: ' . $url);
-            //recuperer les messqges d ereur dans un array 
-            // rendre se array dispo pour les afficher dans le form
-            // revenir sur le form
-            // afficher les messages d.erreur
-
         }
     }
 }
