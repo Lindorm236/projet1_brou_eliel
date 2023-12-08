@@ -1,4 +1,6 @@
+
 <?php
+require_once "../functions/userCrud.php";
 //Fonction pour le verifier le nom
 function is_user_name_valid(string $user_name): array
 {
@@ -7,19 +9,31 @@ function is_user_name_valid(string $user_name): array
         "isValid" => true,
         "msg" => ""
     ];
+
+    $userInDB = getUserByUsername($user_name);
+
+
     if (strlen($user_name) < 4) {
         $result = [
             "isValid" => false,
             "msg" => "Entrez un nom d'utilisateur valide (4 caractères ou plus)"
         ];
-        //verif si existe deja dans la DB
-        // $result = [
-        //     "isValid" => false,
-        //     "msg" => "existe deja"
-        // ];
+    }
 
+    //verif si existe deja dans la DB
+    elseif ($userInDB) {
+        $result = [
+            "isValid" => false,
+            "msg" => "existe deja"
+        ];
     }
     return $result;
+
+
+    return $result;
+
+
+
     if (strlen($user_name) > 20) {
         $result = [
             "isValid" => false,

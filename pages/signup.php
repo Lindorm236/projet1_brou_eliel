@@ -1,6 +1,6 @@
 <?php
 session_start();
-var_dump($_SESSION);
+
 $user_name = '';
 if (isset($_SESSION['signup_form']['user_name'])) {
     $user_name = $_SESSION['signup_form']['user_name'];

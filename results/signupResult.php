@@ -2,6 +2,7 @@
 require_once "../functions/userCrud.php";
 require_once "../functions/validationSignup.php";
 require_once "../utils/connexion.php";
+require_once "../functions/functions.php";
 session_start();
 /*if (isset($_POST["formInscription"]) && !empty($_POST["formInscription"])) {
     echo "<input type='text'";
@@ -84,6 +85,7 @@ if (isset($_POST["formInscription"])) {
 
         if ($verif) {
             // si verif == true : on veut  enregistrer dans la DB puis aller a la page login
+            $encodedPwd = encodePwd($_POST['pwd']);
             echo ("super");
             $token = hash('sha256', random_bytes(32));
             $data = [
