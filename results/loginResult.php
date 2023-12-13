@@ -1,51 +1,17 @@
 <?php
 session_start();
-// {todo : si les informations entrées dans 
-//la base de données, 
-//faire une direction vers une page en fonction de son statut}
-
-//Sinon 
-?>
-<a href="../">Accueil</a>
-<h2>Login result</h2>
-<?php
-
 require_once '../functions/userCrud.php';
-require_once "../functions/functions.php";
+require_once '../functions/functions.php';
 require_once '../utils/connexion.php';
 
+var_dump($_POST);
 
-// var_dump($_POST);
-
-// if (isset($_POST)) {
-
-//     //vérifier si username dans DB
-//     if (!empty($_POST['user_name'])) {
-//         $userData = getUserByUsername($_POST['user_name']);
-//         if ($userData) {
-//             $url = '../pages/signup.php';
-//             header('Location: ' . $url);
-//             // $result = [
-//             //     "isValid" => false,
-//             //     "msg" => "existe deja"
-//             // ];
-//         } else {
-//             //Erreur rien entré
-//             //redirect vers login
-//             $url = '../pages/login.php';
-//             header('Location: ' . $url);
-//         }
-//     }
-// }
-
-
+//Authentification
 
 if (isset($_POST)) {
 
     //vérifier si username dans DB
     if (!empty($_POST['user_name'])) {
-        var_dump($_POST['user_name']);
-
         $userData = getUserByUsername($_POST['user_name']);
     } else {
         //Erreur rien entré
@@ -57,7 +23,6 @@ if (isset($_POST)) {
 
     //si l'utilisateur exist dans la DB
     if ($userData) {
-
         // comparer pwd avec DB (version encodée)
         $enteredPwdEncoded = encodePwd($_POST['pwd']);
         if ($userData['pwd'] == $enteredPwdEncoded) {
@@ -68,6 +33,15 @@ if (isset($_POST)) {
 
             var_dump($token);
             //enregistrer le token en Session et dans la DB
+            //rediction pour superadmin
+            if ($userData["role_id"] == 1) {
+                $url = '../pages/acceuilAdmin.php';
+                header('Location: ' . $url);
+            } else {
+                //redirection client
+                $url = '../pages/accueilClient.php';
+                header('Location: ' . $url);
+            }
 
             echo "C'est le bon mdp ";
         } else {
@@ -77,12 +51,13 @@ if (isset($_POST)) {
             //Proposer de réinitialiser le mdp
             //Créer un msg d'erreur
             //renvoyer sur la page login
+            $url = '../pages/login.php';
+            header('Location: ' . $url);
             echo "C'est pas le bon mdp ";
         }
     }
 } else {
     //redirect vers login
-    echo ("non");
     $url = '../pages/login.php';
     header('Location: ' . $url);
 }

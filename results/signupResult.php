@@ -97,7 +97,7 @@ if (isset($_POST["formInscription"])) {
                 'billing_address_id' => 1,
                 'shipping_adress_id' => 1,
                 'token' => $token,
-                'role_id' => 3
+                'role_id' => 1
             ];
             var_dump($data);
             //enregistrer dans la DB
