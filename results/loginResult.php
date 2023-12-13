@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 require_once '../functions/userCrud.php';
 require_once '../functions/functions.php';
 require_once '../utils/connexion.php';
@@ -26,22 +26,21 @@ if (isset($_POST)) {
         // comparer pwd avec DB (version encodée)
         $enteredPwdEncoded = encodePwd($_POST['pwd']);
         if ($userData['pwd'] == $enteredPwdEncoded) {
+
             //traitement si mdp correct
             //créeer un token
             $token = hash('sha256', random_bytes(32));
             echo '</br></br>Mon token : </br>';
-
-            var_dump($token);
-            //enregistrer le token en Session et dans la DB
-            //rediction pour superadmin
-            if ($userData["role_id"] == 1) {
-                $url = '../pages/acceuilAdmin.php';
-                header('Location: ' . $url);
-            } else {
-                //redirection client
+            $dataUserRoleId = $userData["role_id"];
+            if ($dataUserRoleId == 1) {
                 $url = '../pages/accueilClient.php';
                 header('Location: ' . $url);
+            } elseif ($dataUserRoleId == 3) {
+                $url = '../pages/accueilAdmin.php';
+                header('Location: ' . $url);
             }
+            var_dump($token);
+            //enregistrer le token en Session et dans la DB
 
             echo "C'est le bon mdp ";
         } else {
@@ -51,8 +50,6 @@ if (isset($_POST)) {
             //Proposer de réinitialiser le mdp
             //Créer un msg d'erreur
             //renvoyer sur la page login
-            $url = '../pages/login.php';
-            header('Location: ' . $url);
             echo "C'est pas le bon mdp ";
         }
     }

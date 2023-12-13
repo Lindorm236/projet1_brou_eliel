@@ -91,7 +91,7 @@ if (isset($_POST["formInscription"])) {
             $data = [
                 'user_name' => $_POST['user_name'],
                 'email' => $_POST['email'],
-                'pwd' => $_POST["pwd"],
+                'pwd' => $encodedPwd,
                 'fname' => $_POST['fname'],
                 'lname' => $_POST['lname'],
                 'billing_address_id' => 1,
