@@ -1,0 +1,22 @@
+.elementor-kit-217{--e-global-color-primary:#0054E3;--e-global-color-secondary:#0159FF;--e-global-color-text:#3B3B3B;--e-global-color-accent:#232323;--e-global-typography-primary-font-family:"sen sans site";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"sen sans site";--e-global-typography-secondary-font-weight:300;--e-global-typography-text-font-family:"sen sans site";--e-global-typography-text-font-size:21px;--e-global-typography-text-font-weight:300;--e-global-typography-accent-font-family:"sen sans site";--e-global-typography-accent-font-size:21px;--e-global-typography-accent-font-weight:600;color:#414141;font-family:"sen sans site", "sen sans site", Sans-serif;font-weight:300;line-height:35px;--e-preloader-animation-duration:1500ms;--e-preloader-delay:0ms;--e-preloader-color:#FFF;--e-preloader-size:60px;}.elementor-kit-217 a{color:var( --e-global-color-secondary );}.elementor-kit-217 a:hover{color:var( --e-global-color-primary );text-decoration:underline;}.elementor-kit-217 h1{color:#303030;}.elementor-kit-217 h2{color:#303030;}.elementor-kit-217 h3{color:#303030;font-family:"Hiragino sans", "sen sans site", Sans-serif;}.elementor-kit-217 h4{color:#303030;font-family:"Hiragino sans", "sen sans site", Sans-serif;}.elementor-kit-217 h5{color:#303030;font-family:"Hiragino sans", "sen sans site", Sans-serif;}.elementor-kit-217 h6{color:#303030;font-family:"Hiragino sans", "sen sans site", Sans-serif;}.elementor-kit-217 button,.elementor-kit-217 input[type="button"],.elementor-kit-217 input[type="submit"],.elementor-kit-217 .elementor-button{color:#FFFFFF;background-color:#0159FF;border-style:solid;border-width:2px 2px 2px 2px;border-color:#0159FF;border-radius:2px 2px 2px 2px;padding:16px 40px 16px 40px;}.elementor-kit-217 button:hover,.elementor-kit-217 button:focus,.elementor-kit-217 input[type="button"]:hover,.elementor-kit-217 input[type="button"]:focus,.elementor-kit-217 input[type="submit"]:hover,.elementor-kit-217 input[type="submit"]:focus,.elementor-kit-217 .elementor-button:hover,.elementor-kit-217 .elementor-button:focus{color:#FFFFFF;background-color:#ECCF00;border-style:solid;border-width:2px 2px 2px 2px;border-color:#ECCF00;border-radius:2px 2px 2px 2px;}.elementor-kit-217 input:not([type="button"]):not([type="submit"]),.elementor-kit-217 textarea,.elementor-kit-217 .elementor-field-textual{border-radius:6px 6px 6px 6px;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-bottom:20px;}.elementor-element{--widgets-spacing:20px;}{}h1.entry-title{display:var(--page-title-display);}.elementor-kit-217 e-page-transition{background-color:var( --e-global-color-primary );}@media(max-width:1300px){.elementor-kit-217{--e-global-typography-text-font-size:21px;--e-global-typography-accent-font-size:21px;line-height:30px;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:800px){.elementor-kit-217{--e-global-typography-text-font-size:16px;--e-global-typography-accent-font-size:18px;line-height:25px;--e-preloader-size:40px;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}/* Start Custom Fonts CSS */@font-face {
+	font-family: 'sen sans site';
+	font-style: normal;
+	font-weight: normal;
+	font-display: auto;
+	src: url('https://yugioh-france.fr/fonts/Sen-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'sen sans site';
+	font-style: normal;
+	font-weight: 700;
+	font-display: auto;
+	src: url('https://yugioh-france.fr/fonts/Sen-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'sen sans site';
+	font-style: normal;
+	font-weight: 900;
+	font-display: auto;
+	src: url('https://yugioh-france.fr/fonts/Sen-ExtraBold.ttf') format('truetype');
+}
+/* End Custom Fonts CSS */
