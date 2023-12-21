@@ -33,10 +33,10 @@ if (isset($_POST)) {
             echo '</br></br>Mon token : </br>';
             $dataUserRoleId = $userData["role_id"];
             if ($dataUserRoleId == 1) {
-                $url = '../pages/accueilClient.php';
+                $url = '../pages/accueilAdmin.php';
                 header('Location: ' . $url);
             } elseif ($dataUserRoleId == 3) {
-                $url = '../pages/accueilAdmin.php';
+                $url = '../pages/accueilClient.php';
                 header('Location: ' . $url);
             }
             var_dump($token);

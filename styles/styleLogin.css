@@ -1,0 +1,10 @@
+body {
+  background-image: url(../images/OIP.jpg);
+  background-size: cover;
+  background-position: center;
+  object-fit: contain;
+}
+
+label {
+  color: white;
+}

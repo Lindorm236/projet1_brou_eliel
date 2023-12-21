@@ -18,21 +18,24 @@ var_dump($_SESSION);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="../styles/styleLogin.css">
 </head>
 
 <body>
-    <form action="../results/loginResult.php" method="post">
-        <label for="">nom d'utilisateur</label>
-        <input type="text" name="user_name" id="user_name">
-        <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['login_errors']['user_name']) ? $_SESSION['login_errors']['user_name'] : '' ?></p>
+    <div class="rosenoire">
+        <form action="../results/loginResult.php" method="post">
+            <label for="">nom d'utilisateur</label>
+            <input type="text" name="user_name" id="user_name">
+            <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['login_errors']['user_name']) ? $_SESSION['login_errors']['user_name'] : '' ?></p>
 
-        <label for="password">mot de passe</label>
-        <input type="text" name="pwd" id="pwd">
-        <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['login_errors']['pwd']) ? $_SESSION['login_errors']['pwd'] : '' ?></p>
+            <label for="password">mot de passe</label>
+            <input type="text" name="pwd" id="pwd">
+            <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['login_errors']['pwd']) ? $_SESSION['login_errors']['pwd'] : '' ?></p>
 
-        <button type="submit">se connecter</button>
+            <button type="submit">se connecter</button>
 
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>

@@ -10,10 +10,12 @@
 
 <body>
 
-    <nav>
-        <a href="./pages/signup.php">S'enregistrer</a>
-        <a href="./pages/login.php">Se connecter</a>
-    </nav>
+    <form action="produits.php" method="post"></form>
+
+    <a href="./pages/signup.php">S'enregistrer</a>
+    <a href="./pages/login.php">Se connecter</a>
+    <a href="./produits.php">produits</a>
+
 </body>
 
 </html>

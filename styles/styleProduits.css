@@ -1,0 +1,12 @@
+.rosenoire {
+  float: right;
+
+  object-fit: cover;
+}
+img {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  object-fit: cover;
+  top: 100px;
+}
