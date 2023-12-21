@@ -4,6 +4,7 @@ require_once "../functions/validationSignup.php";
 require_once "../utils/connexion.php";
 require_once "../functions/functions.php";
 session_start();
+//Recupère toutes les données modifiées dans 
 $idRecupered = $_POST["id"];
 $changedUsername = $_POST["user_name"];
 $changedEmail = $_POST["email"];
