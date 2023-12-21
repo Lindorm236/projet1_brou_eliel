@@ -58,3 +58,27 @@ function getUserByUsername(string $user_name)
     $data = mysqli_fetch_assoc($result);
     return $data;
 }
+
+function updateUser(array $data)
+{
+    global $conn;
+
+    $query = "UPDATE user SET `user_name`=?, email = ?, fname= ?, lname= ? WHERE `id`= ?; ";
+
+    $stmt = mysqli_prepare($conn, $query);
+
+    if ($stmt) {
+        mysqli_stmt_bind_param(
+            $stmt,
+            "ssssi",
+            $data["user_name"],
+            $data["email"],
+            $data["fname"],
+            $data["lname"],
+            $data["id"],
+
+        );
+        $result = mysqli_stmt_execute($stmt);
+        return $result;
+    }
+}
