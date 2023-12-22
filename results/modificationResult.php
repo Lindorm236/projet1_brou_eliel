@@ -18,7 +18,7 @@ if (isset($userName)) {
 ?>
             <h1>Que voulez vous changer ?</h1>
             <h2>Entrez la valeur a changer svp !</h2>
-            <form action="../results/verificationSuppression.php" method="post">
+            <form action="../results/verificationModification.php" method="post">
                 <input type="text" value="<?php echo ($recupInfo["id"]) ?>" id="id" name="id" hidden>
                 <input type="text" value="<?php echo ($recupInfo["user_name"]) ?>" id="user_name" name="user_name">
                 <input type="text" value="<?php echo ($recupInfo["email"]) ?>" id="email" name="email">

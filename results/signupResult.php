@@ -52,9 +52,7 @@ if (isset($_POST["formInscription"])) {
 
         //verification du password
         if (!$passwordValidationData["isValid"]) {
-?>
-            <input type="text" value="<?php $_POST["user_name"]; ?>">
-<?php
+
             echo "<br>";
             echo ($passwordValidationData["msg"]);
 
@@ -99,7 +97,7 @@ if (isset($_POST["formInscription"])) {
                 'token' => $token,
                 'role_id' => 1
             ];
-            var_dump($data);
+
             //enregistrer dans la DB
 
             $newUser = createUser($data);

@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="../results/suppressionResult.php" method="post">
+    <form action="../results/modificationResult.php" method="post">
         <label for="user_name">Entrez un nom d'utilisateur</label>
         <input type="text" id="user_name" name="user_name">
         <button type="submit">Envoyer</button>

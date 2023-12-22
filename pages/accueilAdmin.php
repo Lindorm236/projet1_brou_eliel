@@ -68,7 +68,7 @@
                             <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
                             <li><a href="../gestionAdmin/suppression.php" class="nav-link px-2 text-white">Gérer les utilisateurs</a></li>
                             <li><a href="#" class="nav-link px-2 text-white">Ajouter des produits</a></li>
-                            <li><a href="../gestionAdmin/suppression.php" class="nav-link px-2 text-white">Supprimer des produits</a></li>
+                            <li><a href="../gestionAdmin/modification.php" class="nav-link px-2 text-white">Supprimer des produits</a></li>
                             <li><a href="../images/AboutUs.html" class="nav-link px-2 text-white">AboutUs</a></li>
                         </ul>
 
