@@ -41,7 +41,7 @@ function createProduct(array $data)
 
     global $conn;
 
-    $query = "INSERT INTO user VALUES (NULL, ?, ?, ?, ?, ?)";
+    $query = "INSERT INTO product VALUES (NULL, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $query);
 
     if ($stmt = mysqli_prepare($conn, $query)) {
@@ -54,6 +54,35 @@ function createProduct(array $data)
             $data['price'],
             $data['img_url'],
             $data['description'],
+
+        );
+
+        /* Exécution de la requête */
+        $result = mysqli_stmt_execute($stmt);
+        var_dump($result);
+    }
+}
+
+
+function createUserOrder(array $data)
+{
+
+
+
+    global $conn;
+
+    $query = "INSERT INTO order_has_product VALUES (NULL, ?, ?, ?)";
+    $stmt = mysqli_prepare($conn, $query);
+
+    if ($stmt = mysqli_prepare($conn, $query)) {
+
+        mysqli_stmt_bind_param(
+            $stmt,
+            "iii",
+            $data["product_id"],
+            $data['quantity'],
+            $data['price'],
+
 
         );
 

@@ -8,7 +8,7 @@ $pwd = '';
 if (isset($_SESSION['login_form']['pwd'])) {
     $pwd = $_SESSION['login_form']['pwd'];
 }
-var_dump($_SESSION);
+
 ?>
 
 <!DOCTYPE html>

@@ -6,7 +6,7 @@ require_once '../utils/connexion.php';
 
 session_start();
 $userName = $_POST["user_name"];
-var_dump($userName);
+
 
 $verif = true;
 if (isset($userName)) {

@@ -10,7 +10,7 @@ session_start();
 //Verification des champs()
 if (isset($_POST["formInscription"])) {
     // echo ("coucou vous n'avez pas rempli le formulaire");
-    var_dump($_POST);
+
     $_SESSION['signup_form'] = $_POST;
 
     unset($_SESSION['signup_errors']);

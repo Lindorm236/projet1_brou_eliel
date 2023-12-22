@@ -65,9 +65,10 @@
                         </a>
 
                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                            <li><a href="" class="nav-link px-2 text-secondary">Home</a></li>
+                            <li><a href="../index.php" class="nav-link px-2 text-secondary">Home</a></li>
+                            <li><a href="../gestionAdmin/changerRole.php" class="nav-link px-2 text-white">Changer le rôle des utilisateurs</a></li>
                             <li><a href="../gestionAdmin/modification.php" class="nav-link px-2 text-white">Gérer les utilisateurs</a></li>
-                            <li><a href="#" class="nav-link px-2 text-white">Ajouter des produits</a></li>
+                            <li><a href="../gestionAdmin/AjouterProduit.php" class="nav-link px-2 text-white">Ajouter des produits</a></li>
                             <li><a href="../gestionAdmin/supprimerProduit.php" class="nav-link px-2 text-white">Supprimer des produits</a></li>
                             <li><a href="../images/AboutUs.html" class="nav-link px-2 text-white">AboutUs</a></li>
                         </ul>
@@ -77,8 +78,8 @@
                         </form>
 
                         <div class="text-end">
-                            <button type="button" class="btn btn-outline-light me-2">Login</button>
-                            <button type="button" class="btn btn-warning">Sign-up</button>
+                            <button type="button" class="btn btn-outline-light me-2">Se deconnecter</button>
+                            <button type="button" class="btn btn-warning">voir mon magasin</button>
                         </div>
                     </div>
                 </div>

@@ -4,7 +4,7 @@ require_once '../functions/userCrud.php';
 require_once '../functions/functions.php';
 require_once '../utils/connexion.php';
 
-var_dump($_POST);
+
 
 //Authentification
 
@@ -39,7 +39,7 @@ if (isset($_POST)) {
                 $url = '../pages/accueilClient.php';
                 header('Location: ' . $url);
             }
-            var_dump($token);
+
             //enregistrer le token en Session et dans la DB
 
             echo "C'est le bon mdp ";
