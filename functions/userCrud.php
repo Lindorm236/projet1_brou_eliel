@@ -1,13 +1,9 @@
 <?php
-
-/**
- * Create user 
- * 
- */
+//Creation d'un utilisateur
 function createUser(array $data)
 {
 
-    var_dump($data);
+
 
     global $conn;
 
@@ -32,20 +28,9 @@ function createUser(array $data)
         var_dump($result);
     }
 }
-// function insertInstanceIntoTable($user_name, $email, $pwd, $fname, $lname, $billing_address_id, $shipping_address_id, $token, $role_id)
-// {
-//     $sql = "INSERT INTO user (`user_name`, email, pwd, fname, lname, billing_address_id, shipping_address_id, `token`, role_id) VALUES ('$user_name', '$email', '$pwd', '$fname', '$lname', '$billing_address_id', '$shipping_address_id', '$token', '$role_id')";
-
-//     $mysqli = mysqli_init();
-//     $connect = $mysqli->real_connect("localhost", "root", "", "ecom1_project");
-//     if ($connect) {
-//         return mysqli_query($mysqli, $sql);
-//     } else {
-//         return mysqli_connect_error();
-//     }
-// }
 
 
+//Recupère un utilisateur
 function getUserByUsername(string $user_name)
 {
     global $conn;

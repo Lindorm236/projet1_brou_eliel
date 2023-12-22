@@ -12,12 +12,7 @@ if (isset($_POST["user_name"]) and isset($_POST["email"]) and isset($_POST["fnam
     $changedFname = $_POST["fname"];
     $changedLname = $_POST["lname"];
 
-    echo ($idRecupered);
-    echo ($changedUsername);
-    echo ($changedEmail);
-    echo ($changedFname);
-    echo ($changedLname);
-
+    //Mettre les données dans un data
     $data = [
         'id' => $idRecupered,
         'user_name' => $changedUsername,
