@@ -4,23 +4,21 @@ require_once "../functions/validationSignup.php";
 require_once "../utils/connexion.php";
 require_once "../functions/functions.php";
 session_start();
-/*if (isset($_POST["formInscription"]) && !empty($_POST["formInscription"])) {
-    echo "<input type='text'";
-}*/
+
 //Verification des champs()
 if (isset($_POST["formInscription"])) {
-    // echo ("coucou vous n'avez pas rempli le formulaire");
+
 
     $_SESSION['signup_form'] = $_POST;
-
+    // vider les messages d'erreur
     unset($_SESSION['signup_errors']);
 
 
     //Verification user name
     if (isset($_POST["user_name"]) and isset($_POST["email"]) and isset($_POST["pwd"]) and isset($_POST["fname"]) and isset($_POST["lname"])) {
-        // echo "<p>error : </p>";
 
-        // vider les messages d'erreur
+
+
 
         $userNameValidationData = is_user_name_valid($_POST["user_name"]);
 

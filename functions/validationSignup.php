@@ -11,15 +11,13 @@ function is_user_name_valid(string $user_name): array
     ];
 
     $userInDB = getUserByUsername($user_name);
-
-
+    //controle des champs
     if (strlen($user_name) < 4) {
         $result = [
             "isValid" => false,
             "msg" => "Entrez un nom d'utilisateur valide (4 caractères ou plus)"
         ];
     }
-
     //verif si existe deja dans la DB
     elseif ($userInDB) {
         $result = [
@@ -28,11 +26,6 @@ function is_user_name_valid(string $user_name): array
         ];
     }
     return $result;
-
-
-    return $result;
-
-
 
     if (strlen($user_name) > 20) {
         $result = [
@@ -45,7 +38,7 @@ function is_user_name_valid(string $user_name): array
 
 function is_password_valid(string $password): array
 {
-
+    //controle des champs
     $result = [
         "isValid" => true,
         "msg" => ""
@@ -55,12 +48,6 @@ function is_password_valid(string $password): array
             "isValid" => false,
             "msg" => "Entrez un mot de passe plus sécuritaire (6 caractères ou plus)"
         ];
-        //verif si existe deja dans la DB
-        // $result = [
-        //     "isValid" => false,
-        //     "msg" => "existe deja"
-        // ];
-
     }
     return $result;
     if (strlen($password) > 16) {
@@ -74,7 +61,7 @@ function is_password_valid(string $password): array
 
 function is_email_valid(string $email): array
 {
-
+    //Controle des champs
     $result = [
         "isValid" => true,
         "msg" => ""
@@ -84,12 +71,6 @@ function is_email_valid(string $email): array
             "isValid" => false,
             "msg" => "entrez un email"
         ];
-        //verif si existe deja dans la DB
-        // $result = [
-        //     "isValid" => false,
-        //     "msg" => "existe deja"
-        // ];
-
     }
     return $result;
     $email_validation_regex = "/^[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/";
@@ -104,6 +85,7 @@ function is_email_valid(string $email): array
 
 function is_fname_valid(string $fname): array
 {
+    //controle des champs
 
     $result = [
         "isValid" => true,
@@ -114,12 +96,6 @@ function is_fname_valid(string $fname): array
             "isValid" => false,
             "msg" => "Entrez votre nom"
         ];
-        //verif si existe deja dans la DB
-        // $result = [
-        //     "isValid" => false,
-        //     "msg" => "existe deja"
-        // ];
-
     }
     return $result;
     if (is_numeric($fname)) {
@@ -133,7 +109,7 @@ function is_fname_valid(string $fname): array
 
 function is_lname_valid(string $lname): array
 {
-
+    //Controle des champs
     $result = [
         "isValid" => true,
         "msg" => ""
@@ -143,12 +119,6 @@ function is_lname_valid(string $lname): array
             "isValid" => false,
             "msg" => "Entrez un prénom svp !"
         ];
-        //verif si existe deja dans la DB
-        // $result = [
-        //     "isValid" => false,
-        //     "msg" => "existe deja"
-        // ];
-
     }
     return $result;
 

@@ -25,9 +25,7 @@ if (isset($_SESSION['signup_form']['pwd'])) {
 </head>
 
 <body>
-    <!-- <nav class="menu">
-        <a href="signupResult.php">accueil</a>
-    </nav> -->
+
     <form action="../results/signupResult.php" method="post" name="formInscription">
         <label for="user_name">Nom d'utilisateur</label>
         <!-- Validation du user name -->
@@ -36,19 +34,22 @@ if (isset($_SESSION['signup_form']['pwd'])) {
         <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['signup_errors']['user_name']) ? $_SESSION['signup_errors']['user_name'] : '' ?></p>
 
 
-        <!-- Validation du user name -->
+        <!-- Validation du mail -->
         <label for="email">Email</label>
         <input type="text" name="email" id="email" value="<?php echo isset($_SESSION['signup_form']['email']) ? $_SESSION['signup_form']['email'] : '' ?>">
         <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['signup_errors']['email']) ? $_SESSION['signup_errors']['email'] : '' ?></p>
 
+        <!-- Validation du mot de passe -->
         <label for="pwd">Mot de passe</label>
         <input type="password" name="pwd" id="pwd" value="<?php echo isset($_SESSION['signup_form']['pwd']) ? $_SESSION['signup_form']['pwd'] : '' ?>">
         <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['signup_errors']['pwd']) ? $_SESSION['signup_errors']['pwd'] : '' ?></p>
 
+        <!-- Validation du nom -->
         <label for="fname">Nom</label>
         <input type="text" name="fname" id="fname" value="<?php echo isset($_SESSION['signup_form']['fname']) ? $_SESSION['signup_form']['fname'] : '' ?>">
         <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['signup_errors']['fname']) ? $_SESSION['signup_errors']['fname'] : '' ?></p>
 
+        <!-- Validation du prenom -->
         <label for="lname">Prenom(s)</label>
         <input type="text" name="lname" id="lname" value="<?php echo isset($_SESSION['signup_form']['lname']) ? $_SESSION['signup_form']['lname'] : '' ?>">
         <p style="color: red; font-size: 0.8rem;"><?php echo isset($_SESSION['signup_errors']['lname']) ? $_SESSION['signup_errors']['lname'] : '' ?></p>
