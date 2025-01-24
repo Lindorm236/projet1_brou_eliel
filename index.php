@@ -12,7 +12,7 @@
 
     <nav>
         <a href="./pages/signup.php">S'enregistrer</a>
-        <a href="./pages/login.php">Se connecter</a>
+        <a href="./pages/login.php">Se connectere</a>
     </nav>
 </body>
 
